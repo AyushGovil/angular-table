@@ -1,0 +1,39 @@
+.Pending {
+  color: #edbd2f;
+}
+
+.Rejected {
+  color: #e44343;
+}
+
+.Approved {
+  color: #3b9867;
+}
+
+.dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  margin-right: 5px;
+  margin-right: 10px;
+}
+.d-flex {
+  display: flex;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.filter {
+  color: #b6bdc3;
+}
+.table-container {
+  overflow-x: auto;
+  max-width: 100%;
+}

@@ -1,0 +1,68 @@
+<div class="margin">
+  <div class="row">
+    <div class="col d-flex justify-content-start">
+      <h2>Operational tasks</h2>
+    </div>
+    <div class="col d-flex justify-content-end color-text">
+      <mat-form-field>
+        <mat-label>Showing entries for</mat-label>
+        <!-- Added static options for now -->
+        <mat-select [(ngModel)]="selectedEntry" value="All Workshops">
+          <mat-option value="All Workshops">All Workshops</mat-option>
+          <mat-option value="Option 2">Option 2</mat-option>
+          <mat-option value="Option 3">Option 3</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field style="margin-left: 20px">
+        <mat-label>Date range applied</mat-label>
+        <!-- Added static options for now -->
+        <mat-select [(ngModel)]="selectedDate" value="Today">
+          <mat-option value="Today">Today</mat-option>
+          <mat-option value="option 2">Option 2</mat-option>
+          <mat-option value="option 3">Option 3</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="grid-container" style="margin-top: 10px">
+    <div class="grid-item" *ngFor="let item of tasks">
+      <div class="card card-position">
+        <div
+          class="d-flex flex-column align-items-center justify-content-center"
+        >
+          <div
+            class="card-head mb-3"
+            [style.background-color]="item.color + '30'"
+            [style.color]="item.color"
+          >
+            {{ item.header }}
+          </div>
+          <div class="operation-group">
+            <h4 [style.color]="item.color">{{ item.item }}</h4>
+          </div>
+
+          <div *ngFor="let ele of item.subitems">
+            <div
+              class="subitem mb-2"
+              [style.border]="'2px solid' + item.color"
+              [style.color]="item.color"
+              (click)="addTableItem(item.activityType)"
+            >
+              <div style="display: flex; justify-content: center">
+                <mat-icon style="margin-right: 5px">add</mat-icon>
+                <span class="operation">{{ ele }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-3">
+    <h5>User Activity</h5>
+    <div class="mt-3">
+      <app-table [tableItem]="tableItem"></app-table>
+    </div>
+  </div>
+</div>

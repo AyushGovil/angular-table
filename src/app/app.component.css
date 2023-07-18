@@ -1,54 +1,69 @@
-@import "~bootstrap/dist/css/bootstrap.min.css";
-
-.margin {
-  margin: 30px;
+.mat-sidenav-container {
+  height: calc(100vh - 64px);
 }
 
-.card-head {
-  margin-top: 10px;
-  height: 25px;
-  width: 75px;
-  background-color: aqua;
-  border-radius: 14px;
+.menu-item {
+  position: absolute;
+  margin-top: 1px;
+}
+.app-sidenav {
+  width: 240px;
+}
+
+.toolbar-item-spacer {
+  flex: 1 1 auto;
+}
+
+button[mat-icon-button] {
+  color: white;
+}
+
+.user-info {
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 14px;
 }
 
-.opaque {
-  opacity: 0.3;
+.username {
+  margin-right: 40px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
 }
 
-.subitem {
-  height: 35px;
-  width: 210px;
-  border-radius: 4px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.card-position {
-  margin-right: 20px;
-  border-radius: 10px;
-  height: 260px;
-  padding: 10px;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto auto auto;
-  padding: 10px;
-}
-.grid-item {
-  padding: 20px;
-  text-align: center;
-}
-
-.subitem:hover {
-  background-color: rgb(234, 234, 234);
+.logout-button {
+  background-color: transparent;
+  border: none;
+  color: rgb(113, 170, 243);
   cursor: pointer;
+  font-size: 16px;
+  margin-right: 15px;
+}
+
+.logout-icon {
+  font-size: 20px;
+  color: rgb(113, 170, 243);
+}
+
+.menu-item-color {
+  color: #eef0ef;
+}
+
+@media (max-width: 700px) {
+  header {
+    height: 40px; /* Height of the header based on  */
+  }
+}
+::ng-deep .indicator-color > .mat-expansion-indicator:after {
+  color: #eef0ef;
+}
+
+.mat-icon-margin {
+  margin-right: 11px;
+}
+
+:host ::ng-deep .mat-expansion-panel-body {
+  padding: 0 14px 0px;
+}
+.active-link {
+  background: linear-gradient(to right, #172da5, #1ab8e8);
+  padding-right: 0px;
 }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { MatSidenav } from '@angular/material/sidenav';
 interface Item {
   color: string;
   header: string;
@@ -13,40 +13,10 @@ interface Item {
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title: string = 'table-display';
-  selectedEntry: string = 'All Workshops';
-  selectedDate: string = 'Today';
+  sidenav: any = '';
 
-  tasks: Item[] = [
-    {
-      color: '#3F8B9A',
-      header: 'Onboard',
-      item: 'Onboard New Product',
-      subitems: ['Onboard single product'],
-    },
-    {
-      color: '#3F8B9A',
-      header: 'Onboard',
-      item: 'Onboard Brand or Category',
-      subitems: ['Onboard new brand', 'Onboard new category'],
-    },
-    {
-      color: '#639D62',
-      header: 'Purchase',
-      item: 'Record Product Purchase',
-      subitems: ['Record one purchase'],
-    },
-    {
-      color: '#467B77',
-      header: 'Handover',
-      item: 'Product Handover',
-      subitems: ['Handover to workshop', 'Handover to technician'],
-    },
-    {
-      color: '#765ABF',
-      header: 'Takeover',
-      item: 'Product Takeover',
-      subitems: ['Takeover from workshop', 'Takeover from technician'],
-    },
-  ];
+  toggleSidebar(sidenav: MatSidenav) {
+    this.sidenav = sidenav;
+    this.sidenav.toggle();
+  }
 }
