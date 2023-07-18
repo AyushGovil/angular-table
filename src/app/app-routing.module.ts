@@ -6,7 +6,7 @@ import { OperationsComponent } from './components/operations/operations.componen
 const routes: Routes = [
   { path: 'operations', component: OperationsComponent }, // Operations route
   { path: 'home', component: HomeComponent }, // Home route
-  { path: '**', component: OperationsComponent }, // In case route parameters do not match];
+  { path: '**', redirectTo: '/operations' }, // In case route parameters do not match;
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

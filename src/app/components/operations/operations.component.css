@@ -4,48 +4,9 @@
   margin: 30px;
 }
 
-.card-head {
-  margin-top: 10px;
-  height: 25px;
-  width: 75px;
-  background-color: aqua;
-  border-radius: 14px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 14px;
-}
-
-.opaque {
-  opacity: 0.3;
-}
-
-.subitem {
-  height: 35px;
-  width: 210px;
-  border-radius: 4px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.card-position {
-  margin-right: 20px;
-  border-radius: 10px;
-  height: 260px;
-  padding: 10px;
-}
-
 .grid-item {
   margin-top: 20px;
   text-align: center;
-}
-
-.subitem:hover {
-  background-color: rgb(234, 234, 234);
-  cursor: pointer;
 }
 
 :host ::ng-deep .mdc-text-field--filled {
@@ -57,17 +18,6 @@
   color: rgb(42, 92, 255);
 }
 
-.operation {
-  margin-top: 2px;
-  margin-right: 8px;
-}
-
-.operation-group {
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 20px;
-  margin-top: 20px;
-}
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));

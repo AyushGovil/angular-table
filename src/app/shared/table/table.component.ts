@@ -1,13 +1,7 @@
 import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 import * as tableData from '../../../assets/table.json';
 import * as moment from 'moment';
-interface Activity {
-  dateAndTime: string;
-  activityType: string;
-  remarkAsAdmin: boolean;
-  requestStatus: string;
-  requestedBy: string;
-}
+import { Activity } from 'src/app/interfaces/activity.interface';
 
 @Component({
   selector: 'app-table',
@@ -31,7 +25,7 @@ export class TableComponent {
   itemsPerPage: number = 10;
   pageIndex: number = 0;
   ngOnChanges() {
-    if (!this.tableItem.activityType) {
+    if (!this.tableItem) {
       return;
     }
     const parsedDate = moment(

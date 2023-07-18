@@ -1,0 +1,37 @@
+<div
+  class="card card-position"
+  (mouseenter)="isHovered = true"
+  (mouseleave)="isHovered = false"
+  [ngStyle]="{ backgroundColor: isHovered ? item.color : '#ffffff' }"
+>
+  <div class="d-flex flex-column align-items-center justify-content-center">
+    <div
+      class="card-head mb-3"
+      [style.background-color]="item.color + '30'"
+      [ngStyle]="{ color: isHovered ? '#ffffff' : item.color }"
+    >
+      {{ item.header }}
+    </div>
+    <div class="operation-group">
+      <h4 [ngStyle]="{ color: isHovered ? '#ffffff' : item.color }">
+        {{ item.item }}
+      </h4>
+    </div>
+
+    <div *ngFor="let ele of item.subitems">
+      <div
+        class="subitem mb-2"
+        [ngStyle]="{
+          border: isHovered ? '2px solid #ffffff' : '2px solid ' + item.color,
+          color: isHovered ? '#ffffff' : item.color
+        }"
+        (click)="addTableItem(item.activityType)"
+      >
+        <div style="display: flex; justify-content: center">
+          <mat-icon style="margin-right: 5px">add</mat-icon>
+          <span class="operation">{{ ele }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

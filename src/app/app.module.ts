@@ -18,12 +18,14 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatListModule } from '@angular/material/list';
+import { TaskComponent } from './shared/task/task.component';
 @NgModule({
   declarations: [
     AppComponent,
     TableComponent,
     OperationsComponent,
     HomeComponent,
+    TaskComponent,
   ],
   imports: [
     MatToolbarModule,

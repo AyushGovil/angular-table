@@ -1,19 +1,6 @@
 import { Component } from '@angular/core';
-
-interface Item {
-  color: string;
-  header: string;
-  item: string;
-  subitems: string[];
-  activityType: string;
-}
-interface Activity {
-  dateAndTime: string;
-  activityType: string;
-  remarkAsAdmin: boolean;
-  requestStatus: string;
-  requestedBy: string;
-}
+import { Activity } from 'src/app/interfaces/activity.interface';
+import { Item } from 'src/app/interfaces/item.interface';
 @Component({
   selector: 'app-operations',
   templateUrl: './operations.component.html',
@@ -23,13 +10,7 @@ export class OperationsComponent {
   title: string = 'table-display';
   selectedEntry: string = 'All Workshops';
   selectedDate: string = 'Today';
-  tableItem: Activity = {
-    dateAndTime: '',
-    activityType: '',
-    remarkAsAdmin: false,
-    requestStatus: '',
-    requestedBy: '',
-  };
+  tableItem!: Activity;
   tasks: Item[] = [
     {
       color: '#3F8B9A',
@@ -67,15 +48,8 @@ export class OperationsComponent {
       activityType: 'Takeover product',
     },
   ];
-
-  addTableItem(activityType: string) {
-    const date = new Date();
-    this.tableItem = {
-      activityType: activityType,
-      dateAndTime: String(date),
-      remarkAsAdmin: true,
-      requestStatus: 'Approved',
-      requestedBy: 'Ayush',
-    };
+  onTableItemAdded(tableItem: any) {
+    // Handle the emitted tableItem data here
+    this.tableItem = tableItem;
   }
 }
