@@ -75,7 +75,7 @@ export class OperationsComponent {
       dateAndTime: String(date),
       remarkAsAdmin: true,
       requestStatus: 'Approved',
-      requestedBy: 'Raj',
+      requestedBy: 'Ayush',
     };
   }
 }

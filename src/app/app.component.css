@@ -67,3 +67,8 @@ button[mat-icon-button] {
   background: linear-gradient(to right, #172da5, #1ab8e8);
   padding-right: 0px;
 }
+.hamburger {
+  position: absolute;
+  margin-top: 4px;
+  margin-left: -12px;
+}
