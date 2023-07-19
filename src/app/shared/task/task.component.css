@@ -1,4 +1,7 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+::ng-deep th {
+  background-color: #f2f9ff !important; /* Global styling for the th tag */
+}
 
 .card-head {
   margin-top: 10px;

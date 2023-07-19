@@ -7,16 +7,14 @@
   >
     <!-- Define table columns -->
     <ng-container matColumnDef="dateAndTime">
-      <th style="background-color: #f2f9ff" mat-header-cell *matHeaderCellDef>
-        Date and time of request
-      </th>
+      <th mat-header-cell *matHeaderCellDef>Date and time of request</th>
       <td mat-cell *matCellDef="let activity">
         {{ convertTimeFormat(activity.dateAndTime) }}
       </td>
     </ng-container>
 
     <ng-container matColumnDef="activityType">
-      <th style="background-color: #f2f9ff" mat-header-cell *matHeaderCellDef>
+      <th mat-header-cell *matHeaderCellDef>
         <div class="d-flex justify-content-between align-items-center">
           <span>Activity Type</span>
           <span class="material-icons filter">filter_alt</span>
@@ -26,16 +24,12 @@
     </ng-container>
 
     <ng-container matColumnDef="remarkAsAdmin">
-      <th style="background-color: #f2f9ff" mat-header-cell *matHeaderCellDef>
-        Remarks of Admin
-      </th>
+      <th mat-header-cell *matHeaderCellDef>Remarks of Admin</th>
       <td mat-cell *matCellDef="let activity">{{ activity.remarkAsAdmin }}</td>
     </ng-container>
 
     <ng-container matColumnDef="requestStatus">
-      <th style="background-color: #f2f9ff" mat-header-cell *matHeaderCellDef>
-        Request Status
-      </th>
+      <th mat-header-cell *matHeaderCellDef>Request Status</th>
       <td mat-cell *matCellDef="let activity">
         <span
           [ngClass]="{
@@ -53,15 +47,11 @@
     </ng-container>
 
     <ng-container matColumnDef="requestedBy">
-      <th style="background-color: #f2f9ff" mat-header-cell *matHeaderCellDef>
-        Requested By
-      </th>
+      <th mat-header-cell *matHeaderCellDef>Requested By</th>
       <td mat-cell *matCellDef="let activity">{{ activity.requestedBy }}</td>
     </ng-container>
     <ng-container matColumnDef="Action">
-      <th style="background-color: #f2f9ff" mat-header-cell *matHeaderCellDef>
-        Action
-      </th>
+      <th mat-header-cell *matHeaderCellDef>Action</th>
       <td mat-cell *matCellDef="let activity">
         <a href="" style="color: rgb(42, 92, 255)">View Details</a>
       </td>
